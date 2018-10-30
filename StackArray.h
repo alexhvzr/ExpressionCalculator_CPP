@@ -29,13 +29,6 @@ public:
     int getFilledSize() const {
         return sTop;
     }
-
-//    StackArray(){
-//        cout << "initiallized 2" << endl;
-//        size = DEFAULT_STACK_SIZE;
-//        data = new T[size];
-//        sTop = 0;
-//    }
     void initialize(){
         sTop = 0;
     }
