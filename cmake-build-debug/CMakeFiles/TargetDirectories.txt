@@ -1,0 +1,3 @@
+C:/Users/Alex/GitHub/CS300/Assignment3/cmake-build-debug/CMakeFiles/Assignment3.dir
+C:/Users/Alex/GitHub/CS300/Assignment3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Alex/GitHub/CS300/Assignment3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

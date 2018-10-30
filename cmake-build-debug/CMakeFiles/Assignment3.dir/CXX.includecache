@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Alex/GitHub/CS300/Assignment3/ExpressionCalculator.h
+StackArray.h
+C:/Users/Alex/GitHub/CS300/Assignment3/StackArray.h
+iostream
+-
+vector
+-
+sstream
+-
+iterator
+-
+
+C:/Users/Alex/GitHub/CS300/Assignment3/StackADT.h
+
+C:/Users/Alex/GitHub/CS300/Assignment3/StackArray.h
+StackADT.h
+C:/Users/Alex/GitHub/CS300/Assignment3/StackADT.h
+iostream
+-
+assert.h
+-
+
+C:/Users/Alex/GitHub/CS300/Assignment3/main.cpp
+iostream
+-
+ExpressionCalculator.h
+C:/Users/Alex/GitHub/CS300/Assignment3/ExpressionCalculator.h
+
