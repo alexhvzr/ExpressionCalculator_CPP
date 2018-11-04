@@ -69,7 +69,7 @@ public:
                 } else if (temp == "*" && stack->getFilledSize() <= 2) {
                     cout << "Missing Operands" << endl;
                 }
-                //multiplies the top two elements of the stack
+                //divides the top two elements of the stack
                 if (temp == "/" && stack->getFilledSize() >= 2) {
                     int a = stack->top();
                     stack->pop();
