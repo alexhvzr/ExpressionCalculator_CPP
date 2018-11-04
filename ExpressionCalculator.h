@@ -15,6 +15,7 @@ using namespace std;
 
 class ExpressionCalculator {
     string input;
+    int result = 0;
     StackArray<int> *stack;
 public:
     void runCalculator() {
@@ -41,9 +42,42 @@ public:
                     stack->pop();
                     int b = stack->top();
                     stack->pop();
-                    int c = (a + b);
-                    stack->push(c);
+                    result = (a + b);
+                    stack->push(result);
                 } else if (temp == "+" && stack->getFilledSize() <= 2) {
+                    cout << "Missing Operands" << endl;
+                }
+                //subtracts the top two elements of the stack
+                if (temp == "-" && stack->getFilledSize() >= 2) {
+                    int a = stack->top();
+                    stack->pop();
+                    int b = stack->top();
+                    stack->pop();
+                    result = (b-a);
+                    stack->push(result);
+                } else if (temp == "-" && stack->getFilledSize() <= 2) {
+                    cout << "Missing Operands" << endl;
+                }
+                //multiplies the top two elements of the stack
+                if (temp == "*" && stack->getFilledSize() >= 2) {
+                    int a = stack->top();
+                    stack->pop();
+                    int b = stack->top();
+                    stack->pop();
+                    result = (a * b);
+                    stack->push(result);
+                } else if (temp == "*" && stack->getFilledSize() <= 2) {
+                    cout << "Missing Operands" << endl;
+                }
+                //multiplies the top two elements of the stack
+                if (temp == "/" && stack->getFilledSize() >= 2) {
+                    int a = stack->top();
+                    stack->pop();
+                    int b = stack->top();
+                    stack->pop();
+                    result = (b/a);
+                    stack->push(result);
+                } else if (temp == "/" && stack->getFilledSize() <= 2) {
                     cout << "Missing Operands" << endl;
                 }
                 //prints the stack
@@ -59,11 +93,12 @@ public:
                 if (isalpha(temp.front())) {
                     cout << "Invalid Input" << endl;
                 }
-                //
                 temp = results[i];
                 i++;
             }
+            break;
         }
+        cout << "Result: " << result <<endl;
     }
 };
 
