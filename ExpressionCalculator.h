@@ -30,6 +30,7 @@ public:
         //loop through vector of string inputs
         for (int i = 0; i < results.size();) {
             int found;
+            double wrongType;
             string temp;
             while (temp != "\\") {
                 //checks to see if the input was an integer, if it is, push it into the stack
@@ -69,14 +70,18 @@ public:
                 } else if (temp == "*" && stack->getFilledSize() <= 2) {
                     cout << "Missing Operands" << endl;
                 }
-                //multiplies the top two elements of the stack
+                //divides the top two elements of the stack
                 if (temp == "/" && stack->getFilledSize() >= 2) {
                     int a = stack->top();
-                    stack->pop();
-                    int b = stack->top();
-                    stack->pop();
-                    result = (b/a);
-                    stack->push(result);
+                    if(a == 0){
+                        cout << "Undefined" << endl;
+                    } else {
+                        stack->pop();
+                        int b = stack->top();
+                        stack->pop();
+                        result = (b / a);
+                        stack->push(result);
+                    }
                 } else if (temp == "/" && stack->getFilledSize() <= 2) {
                     cout << "Missing Operands" << endl;
                 }

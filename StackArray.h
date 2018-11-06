@@ -66,14 +66,15 @@ public:
 
     }
     friend ostream& operator<<(ostream& os, StackArray& stack){
+
         os << "<";
         if(stack.isEmpty()){
 
         }else {
-            for (int i = 0; i < stack.sTop-1; i++) {
+            for (int i = stack.sTop-1; i > 0; i--) {
                 os << stack.data[i] << ", ";
             }
-           os << stack.data[stack.sTop-1];
+           os << stack.data[0];
         }
         os <<">" <<endl;
         return os;
